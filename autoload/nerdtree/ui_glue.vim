@@ -552,13 +552,13 @@ endfunction
 
 " FUNCTION: s:openInNewTab(target) {{{1
 function! s:openInNewTab(target) abort
-    let l:opener = g:NERDTreeOpener.New(a:target.path, {'reuse': 'all', 'where': 't', 'keepopen': !nerdtree#closeTreeOnOpen()})
+    let l:opener = g:NERDTreeOpener.New(a:target.path, {'reuse': 'all', 'where': 'p', 'keepopen': !nerdtree#closeTreeOnOpen()})
     call l:opener.open(a:target)
 endfunction
 
 " FUNCTION: s:openInNewTabSilent(target) {{{1
 function! s:openInNewTabSilent(target) abort
-    let l:opener = g:NERDTreeOpener.New(a:target.path, {'reuse': 'all', 'where': 't', 'keepopen': !nerdtree#closeTreeOnOpen(), 'stay': 1})
+    let l:opener = g:NERDTreeOpener.New(a:target.path, {'reuse': 'all', 'where': 'p', 'keepopen': !nerdtree#closeTreeOnOpen(), 'stay': 1})
     call l:opener.open(a:target)
 endfunction
 
